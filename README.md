@@ -6,7 +6,7 @@
 
 ## 🔗 Live Demo
 Click the link below to visit the live website:
-🚀 **[Click](https://nama-project-kamu.vercel.app)**
+🚀 **[Click](https://rizki-maulana-portfolio.vercel.app)**
 
 ---
 
