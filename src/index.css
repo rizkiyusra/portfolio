@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: 'Outfit', system-ui, sans-serif;
+    --animate-fade-up: fade-up 0.5s ease-out forwards;
+
+    /* Semantic Colors Mapping */
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+
+    --color-border: var(--border);
+
+    --animate-fade-up: fade-up 0.5s ease-out forwards;
+    --animate-fade-in: fade-in 0.3s ease-out forwards;
+
+    @keyframes fade-up {
+        from { opacity: 0; transform: translateY(20px); filter: blur(5px); }
+        to { opacity: 1; transform: translateY(0); filter: blur(0); }
+    }
+    @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+}
+
+:root {
+    --background: #f8fafc;       /* Putih bersih */
+    --foreground: #09090b;       /* Hitam pekat (Zinc-950) untuk teks utama */
+
+    --card: #ffffff;
+    --card-foreground: #09090b;
+
+    --primary: #18181b;          /* Aksen utama hitam (Zinc-900) */
+    --primary-foreground: #fafafa; /* Teks di atas tombol primary */
+
+    --muted: #f4f4f5;            /* Abu-abu sangat muda (Zinc-100) untuk bg secondary */
+    --muted-foreground: #71717a; /* Abu-abu sedang (Zinc-500) untuk teks secondary */
+
+    --border: #e4e4e7;           /* Garis halus (Zinc-200) */
+}
+
+.dark {
+    --background: #09090b;       /* Zinc-950 (Bukan hitam #000000 agar elegan) */
+    --foreground: #fafafa;       /* Putih lembut (Zinc-50) */
+
+    --card: #09090b;
+    --card-foreground: #fafafa;
+
+    --primary: #fafafa;          /* Aksen utama putih */
+    --primary-foreground: #18181b; /* Teks hitam di tombol putih */
+
+    --muted: #27272a;            /* Zinc-800 untuk elemen tidak aktif */
+    --muted-foreground: #a1a1aa; /* Zinc-400 untuk teks redup */
+
+    --border: #27272a;           /* Garis halus gelap (Zinc-800) */
+}
+
+/* Memaksa dark mode aktif berdasarkan class HTML, bukan setting laptop */
+@variant dark (&:where(.dark, .dark *));
+
+html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--muted-foreground);
+}
+
+.bg-grid-white {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+.mask-radial-faded {
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
+}
+
+.font-display {
+    font-family: 'Outfit', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+}
