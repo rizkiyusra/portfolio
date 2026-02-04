@@ -1,30 +1,3 @@
-import goSmartApps1 from '../assets/images/goSmartApps/goSmartApps.png';
-import goSmartApps2 from '../assets/images/goSmartApps/goSmartApps2.png';
-
-import uasPweb1 from '../assets/images/uasPweb/uasPweb.png';
-import uasPweb2 from '../assets/images/uasPweb/uasPweb2.png';
-import uasPweb3 from '../assets/images/uasPweb/uasPweb3.png';
-import uasPweb4 from '../assets/images/uasPweb/uasPweb4.png';
-
-import quran1 from '../assets/images/quran/quran.png';
-import quran2 from '../assets/images/quran/quran2.png';
-import quran3 from '../assets/images/quran/quran3.jpg';
-import quran4 from '../assets/images/quran/quran4.png';
-import quran5 from '../assets/images/quran/quran5.png';
-import quran6 from '../assets/images/quran/quran6.jpg';
-import quran7 from '../assets/images/quran/quran7.png';
-
-import mapanin1 from '../assets/images/mapanin/mapanin.png';
-import mapanin2 from '../assets/images/mapanin/mapanin2.png';
-import mapanin3 from '../assets/images/mapanin/mapanin3.png';
-import mapanin4 from '../assets/images/mapanin/mapanin4.png';
-import mapanin5 from '../assets/images/mapanin/mapanin5.png';
-import mapanin6 from '../assets/images/mapanin/mapanin6.png';
-import mapanin7 from '../assets/images/mapanin/mapanin7.png';
-import mapanin8 from '../assets/images/mapanin/mapanin8.png';
-import mapanin9 from '../assets/images/mapanin/mapanin9.png';
-import mapanin10 from '../assets/images/mapanin/mapanin10.png';
-
 export type Project = {
     id: number;
     title: string;
@@ -42,8 +15,8 @@ export const projects: Project[] = [
         title: "GoSmartApps - Collage Project",
         category: "Mobile",
         img: [
-            goSmartApps1,
-            goSmartApps2,
+            "/projects/goSmartApps/goSmartApps.png",
+            "/projects/goSmartApps/goSmartApps2.png"
         ],
         description: "A project exploring mobile logic, integrating user authentication and a standard navigation drawer for functional usability.",
         tech: ["Java", "Android"],
@@ -54,10 +27,10 @@ export const projects: Project[] = [
         title: "RESTful API - College Backend Project",
         category: "Backend",
         img: [
-            uasPweb1,
-            uasPweb2,
-            uasPweb3,
-            uasPweb4,
+            "/projects/uasPweb/uasPweb.png",
+            "/projects/uasPweb/uasPweb2.png",
+            "/projects/uasPweb/uasPweb3.png",
+            "/projects/uasPweb/uasPweb4.png"
         ],
         description: "Developed a secure backend from scratch using OOP principles to maintain students, subjects, and academic schedules.",
         tech: ["PHP", "MySQL", "RESTful API"],
@@ -68,38 +41,54 @@ export const projects: Project[] = [
         title: "Qur'an",
         category: "Frontend",
         img: [
-            quran1,
-            quran2,
-            quran3,
-            quran4,
-            quran5,
-            quran6,
-            quran7,
+            "/projects/quran/quran.png",
+            "/projects/quran/quran2.png",
+            "/projects/quran/quran3.jpg",
+            "/projects/quran/quran4.png",
+            "/projects/quran/quran5.png",
+            "/projects/quran/quran6.jpg",
+            "/projects/quran/quran7.png"
         ],
         description: "A Qur'an web application featuring dynamic data fetching, synchronized audio playback, and a clean layout for comfortable daily reading.",
-        tech: ["Vue", "Bootstrap", "API quran.com", "Axios", "Web Application"],
+        tech: ["JavaScript", "Vue", "Bootstrap", "API quran.com", "Axios", "Web Application"],
         githubUrl: "https://github.com/rizkiyusra/quran",
         demoUrl: "https://app-quran-online.netlify.app/"
     },
     {
-        id: 6,
+        id: 4,
         title: "Mapanin - Financial Calculator",
         category: "Frontend",
         img: [
-            mapanin1,
-            mapanin2,
-            mapanin3,
-            mapanin4,
-            mapanin5,
-            mapanin6,
-            mapanin7,
-            mapanin8,
-            mapanin9,
-            mapanin10,
+            "/projects/mapanin/mapanin.png",
+            "/projects/mapanin/mapanin2.png",
+            "/projects/mapanin/mapanin3.png",
+            "/projects/mapanin/mapanin4.png",
+            "/projects/mapanin/mapanin5.png",
+            "/projects/mapanin/mapanin6.png",
+            "/projects/mapanin/mapanin7.png",
+            "/projects/mapanin/mapanin8.png",
+            "/projects/mapanin/mapanin9.png",
+            "/projects/mapanin/mapanin10.png"
         ],
         description: "A smart investment planner helping users visualize compound interest growth, wrapped in a modern, responsive interface built with React and Tailwind.",
-        tech: ["React", "Tailwind CSS", "CI/CD", "Web Application"],
+        tech: ["JavaScript", "React", "Tailwind CSS", "CI/CD", "Web Application"],
         githubUrl: "https://github.com/rizkiyusra/mapanin",
         demoUrl: "https://rizkiyusra.github.io/mapanin/"
+    },
+    {
+        id: 5,
+        title: "WebGIS Road Map",
+        category: "Fullstack",
+        img: [
+            "/projects/webGISRoadMap/webGISRoadMap.png",
+            "/projects/webGISRoadMap/webGISRoadMap2.png",
+            "/projects/webGISRoadMap/webGISRoadMap3.png",
+            "/projects/webGISRoadMap/webGISRoadMap4.png",
+            "/projects/webGISRoadMap/webGISRoadMap5.png",
+            "/projects/webGISRoadMap/webGISRoadMap6.png"
+        ],
+        description: "NKDE spatial analysis to visualize road damage density and identify infrastructure hotspots for monitoring.",
+        tech: ["PHP", "Laravel", "Bootstrap", "PostgreSQL", "OpenLayers", "Web Application"],
+        githubUrl: "https://github.com/rizkiyusra/gis-road-map"
     }
 ];

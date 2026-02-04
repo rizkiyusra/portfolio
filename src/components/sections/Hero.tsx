@@ -45,7 +45,7 @@ export default function Hero() {
                         {/* Social Links */}
                         <div className="flex gap-4">
                             {[
-                                { icon: <Instagram size={20} />, href: "https:/www.instagram.com/rizkiyusra/" },
+                                { icon: <Instagram size={20} />, href: "https://www.instagram.com/rizkiyusra/" },
                                 { icon: <Linkedin size={20} />, href: "https://www.linkedin.com/in/rizki-maulana-yusra/" },
                                 { icon: <Github size={20} />, href: "https://github.com/rizkiyusra/" }
                             ].map((social, index) => (
